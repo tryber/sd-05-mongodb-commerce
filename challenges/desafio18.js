@@ -3,9 +3,9 @@ db.produtos.createIndex(
   { default_language: "portuguese" },
 );
 db.produtos
-  .find({
+  .count({
     $text: {
-      $search: '"feito com"',
+      $search: "\"feito com\"",
     },
   })
   .count();
