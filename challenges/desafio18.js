@@ -7,5 +7,4 @@ db.produtos
     $text: {
       $search: "\"feito com\"",
     },
-  })
-  .count();
+  });
