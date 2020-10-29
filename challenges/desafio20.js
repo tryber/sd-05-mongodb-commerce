@@ -1,5 +1,5 @@
 // Crie uma query que faça a remoção do campo curtidas do item Big Mac.
-db.produtos.updateOne({ name: "Big Mac" }, { $unset: { curtidas: "" } });
+db.produtos.updateOne({ nome: "Big Mac" }, { $unset: { curtidas: "" } });
 // unset é para campos inteiros, pull é para elementos de arrays contidos em campos.
 
 // Crie uma query que retorne o nome e curtidas de todos os documentos.
