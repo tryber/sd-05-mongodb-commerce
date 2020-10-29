@@ -4,7 +4,7 @@ db.produtos.updateMany(
   { $set: { valorUnitario: NumberDecimal("0.00") } }
 );
 
-// ou podia ser primeiro parâmetro {} jà que set por padrao adiciona apenas quando campo não existe?
+// Questionamento: podia ser também primeiro parâmetro {} jà que set por padrao adiciona apenas quando campo não existe? Ou addToSet?
 
 // Crie uma query que retorne o nome e valorUnitario de todos os produtos.
 db.produtos.find({}, { nome: 1, valorUnitario: 1, _id: 0 });
