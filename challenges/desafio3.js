@@ -6,7 +6,7 @@ db.produtos.updateMany(
 );
 
 db.produtos.updateMany(
-    {tags: {$not: {$all: ["ave"]}}},
+    {tags: {$all: ["bovino"]}},
     {
         $inc: {avaliacao: 5}
     }
