@@ -14,5 +14,3 @@ db.produtos.updateMany(
 );
 
 db.produtos.find({}, { "nome" : 1, "avaliacao": 1, "_id": 0 });
-
-db.produtos.find({nome: {$in:["Quarteirão com Queijo", "Cheddar McMelt"]}});
