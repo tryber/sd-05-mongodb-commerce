@@ -5,7 +5,7 @@ db.produtos.updateMany(
       $elemMatch: { tipo: "sódio", percentual: { $gte: 40 } },
     },
   },
-  { push: { tags: { $each: ["muito sódio"] } } }
+  { push: { tags: "muito sódio" } }
 );
 
 // Crie uma query que retorne o nome e tags de todos os documentos.

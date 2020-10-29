@@ -8,7 +8,7 @@ db.produtos.updateOne({ nome: "Bic Mac" }, { $inc: { "vendasPorDia.3": 60 } });
 
 //Crie uma query que incremente as vendas de todos os sanduíches de carne do tipo bovino e pão aos sábados em 120.
 db.produtos.updateMany(
-  { tags: { $in: ["pão", "bovino"] } },
+  { tags: { $in: ["bovino", "pão"] } },
   { $inc: { "vendasPorDia.6": 120 } }
 );
 
