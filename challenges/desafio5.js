@@ -1,5 +1,12 @@
-// Desafio 4
-// Atribua a data corrente ao campo ultimaModificacao no sanduíche Big Mac.
-// Para isso, escreva no arquivo desafio4.js duas queries, nesta ordem:
-// Crie uma query que atribua a data corrente ao campo ultimaModificacao no sanduíche Big Mac. Para a data corrente faça uso do tipo Date.
-// Crie uma query que retorne o nome de todos os documentos em que o campo ultimaModificacao existe.
+// Desafio 5
+// Adicione ketchup aos ingredientes para todos os sanduíches menos o McChicken, garantindo que não haja duplicidade nos ingredientes.
+// Para isso, escreva no arquivo desafio5.js duas queries, nesta ordem:
+// Crie uma query que adicione ketchup aos ingredientes para todos os sanduíches menos o McChicken, garantindo que não haja duplicidade nos ingredientes.
+// Crie uma query que retorne o nome e ingredientes de todos os documentos.
+
+db.produtos.updateMany(
+  { "nome": { $nin: [ "McChicken" ] } },
+  { $addToSet: { "ingredientes": "ketchup" } }
+);
+
+db.produtos.find({}, { "_id": 0, "nome": 1, "ingredientes": 1 }).pretty();
