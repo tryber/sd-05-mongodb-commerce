@@ -1,7 +1,7 @@
 // Crie uma query que atribua a data corrente ao campo ultimaModificacao no sanduíche Big Mac. Para a data corrente faça uso do tipo Date.
 db.produtos.updateOne(
   { nome: "Big mac" },
-  { currentDate: { ultimaModificacao: true } }
+  { $currentDate: { ultimaModificacao: true } }
 );
 // true indica por padrão o tipo Date, também era possível via { $type: "date" }
 
