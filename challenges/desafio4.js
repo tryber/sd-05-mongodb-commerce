@@ -1,5 +1,5 @@
 db.produtos.updateMany({
-    nome: 'Big Mac'
+    nome: "Big Mac"
 }, {
     $set: {
         ultimaModificacao: new Date()

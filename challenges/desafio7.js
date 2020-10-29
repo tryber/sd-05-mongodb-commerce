@@ -1,6 +1,6 @@
 db.produtos.updateMany({}, {
     $pull: {
-        ingredientes: 'cebola'
+        ingredientes: "cebola"
     }
 });
 

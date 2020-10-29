@@ -1,5 +1,5 @@
 db.produtos.updateMany({
-    nome: 'Cheddar McMelt'
+    nome: "Cheddar McMelt"
 }, {
     $pop: {
         ingredientes: 1
