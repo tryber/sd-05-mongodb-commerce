@@ -4,11 +4,11 @@ db.produtos.updateMany(
 );
 db.proutos.updateMany(
   { tags: { $eq: "bovino" } },
-  { $inc: { avalicao: 5 } }
+  { $inc: { avaliacao: 5 } }
 );
 db.proutos.updateMany(
   { tags: { $eq: "ave" } },
-  { $inc: { avalicao: 3 } }
+  { $inc: { avaliacao: 3 } }
 );
 db.produtos.find(
   {},
