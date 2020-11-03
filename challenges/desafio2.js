@@ -31,3 +31,7 @@ db.produtos.find(
     valorUnitario: 1,
   }
 );
+
+// - o método find() seleciona documentos de uma coleção e retorna um cursor com esses documentos;
+// - o find() recebe como parâmetros uma query (filtro de seleção) e uma projection (especifica quais campos serão retornados);
+// - como queremos selecionar todos os documentos, a query é vazia;
