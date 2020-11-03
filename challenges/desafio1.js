@@ -8,6 +8,7 @@ db.produtos.updateMany({}, {
     }
 });
 
+// - consulta prévia ao banco para ver a estrutura do documento: db.produtos.find() ou findOne();
 // - o método updateMany() permite que vários documentos que satisfaçam o critério de filtro sejam alterados de uma única vez;
 // - nesse caso não há necessidade de nenhum filtro porque queremos alterar todos os documentos;
 // - operador $set altera o valor de um campo específico e, se o campo não existir, o $set adiciona um novo campo com o valor especificado;
