@@ -10,7 +10,6 @@ db.produtos.updateMany(
     },
   }
 );
-
 // - o método updateMany() permite que vários documentos que satisfaçam o critério de filtro sejam alterados de uma única vez;
 // - updateMany() recebe dois parâmetros: query (filtro) e projection (o que será alterado);
 // - nesse caso não há necessidade de nenhum filtro porque queremos alterar todos os documentos;
@@ -30,7 +29,6 @@ db.produtos.updateMany(
     },
   }
 );
-
 // - nesse caso, utilizamos o campo tags como filtro para achar os sanduíches bovinos;
 // - o operador $inc permite incrementar/decrementar valores de um campo específico, utilizando valores positivos ou negativos;
 
@@ -45,7 +43,6 @@ db.produtos.updateMany(
     },
   }
 );
-
 // - repetindo a lógica da query anterior;
 
 // Crie uma query que retorne o nome e avaliacao de todos os sanduíches.
@@ -57,7 +54,6 @@ db.produtos.find(
     avaliacao: 1,
   }
 );
-
 // - o método find() seleciona documentos de uma coleção e retorna um cursor com esses documentos;
 // - o find() recebe como parâmetros uma query (filtro de seleção) e uma projection (especifica quais campos serão retornados);
 // - como queremos selecionar todos os documentos, a query é vazia;
