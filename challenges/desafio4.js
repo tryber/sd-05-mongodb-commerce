@@ -12,7 +12,7 @@ db.produtos.updateOne(
     }
   }
 );
-// - o método updateOne() o método updateOne() altera apenas o primeiro documento que satisfaça o critério de filtro;
+// - o método updateOne() altera apenas o primeiro documento que satisfaça o critério de filtro;
 // - honestidade acadêmica: aprendi através do PR da Juliette que é possível a sintaxe dessa forma:
 // - dentro do operador $currentDate, o valor 'true' indica por padrão o tipo 'date';
 // - outra sintaxe possível é simplesmente escrever { $type: "date" };
