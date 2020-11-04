@@ -7,7 +7,10 @@
 
 // Crie uma query que retorne a quantidade de documentos que contêm a expressão feito com utilizando o operador $text.
 // https://docs.mongodb.com/manual/tutorial/specify-language-for-text-index/ - HA
-
 db.produtos.createIndex({descricao: "text"}, {default_language: "portuguese"});
 
-db.produtos.count({$text: {$search: "feito com"}});
+db.produtos.count({
+  $text: {
+    $search: "\"feito com\""
+  }
+});
