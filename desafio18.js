@@ -1,7 +1,10 @@
-db.produtos.createIndex({"descricao": "text"}, {default_language: "portuguese"});
+db.produtos.createIndex(
+  { "descricao": "text" },
+  { default_language: "portuguese"}
+);
 
-db.produtos.find({
-  $text: {
-    $search: "\"feito com\""
+db.produtos.find(
+  {
+    $text: { $search: "\"feito com\""}
   }
-}).count();
+).count();
