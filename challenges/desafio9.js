@@ -28,4 +28,3 @@ db.produtos.find(
   // - como queremos selecionar todos os documentos, a query do método find() é vazia;
   // - o find() sempre traz como padrão o _id e por isso definir como zero (false), para que não apareça;
   // - o que é definido como 1 (true) dentro da projection é o que será retornado;
-  

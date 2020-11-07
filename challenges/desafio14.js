@@ -34,4 +34,3 @@ db.produtos.find(
       tags: 1
     }
   );
-  
