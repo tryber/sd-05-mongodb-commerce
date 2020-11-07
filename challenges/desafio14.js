@@ -20,10 +20,18 @@ db.produtos.updateMany(
       }
     }
   );
-
 // - com o operador $elemMatch é possível especificar várias queries para um mesmo array;
 // - operador $elemMatch seleciona os docs que contêm um *campo do tipo array* com pelo menos um elemento que satisfaça todos os critérios;
 // - operador $gt - greater than; operador $lt - lower than;
 // - o operador $push adiciona um valor a um array e, se o campo não existir no documento, um novo array com o valor em um elemento será adicionado;
 
 // Crie uma query que retorne o nome e tags de todos os documentos.
+db.produtos.find(
+    {},
+    {
+      _id: 0,
+      nome: 1,
+      tags: 1
+    }
+  );
+  
