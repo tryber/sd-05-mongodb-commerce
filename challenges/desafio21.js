@@ -6,9 +6,6 @@ curtidas é maior que o número de sanduíches vendidos.
 db.produtos.find(
   {
     $expr: { $gt: [ "$curtidas", "$vendidos" ] }
-  }
-);
-
-db.produtos.find(
+  },
   { "_id": 0, "nome": 1 }
 );
