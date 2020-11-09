@@ -13,13 +13,14 @@ Crie uma query que retorne o nome e tags de todos os documentos.
 */
 db.produtos.updateMany(
   {
-    $and: [
-      { "valoresNutricionais.tipo": "sódio" },
-      { "valoresNutricionais.percentual": { $gte: 40 } }
-    ]
+    "valoresNutricionais": {
+      $elemMatch: {
+        "tipo": { $eq: "sódio" }, "percentual": { $gte: 40 }
+      }
+    }
   },
   {
-    $push: {
+    $addToSet: {
       "tags": {
         $each: ["muito sódio"]
       }
