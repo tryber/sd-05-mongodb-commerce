@@ -14,7 +14,7 @@ de todos os documentos.
 db.produtos.updateMany(
   {},
   { $rename: {
-      "descricao:": "descricaoSite"
+      "descricao": "descricaoSite"
     }
   }
 );

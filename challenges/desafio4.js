@@ -11,7 +11,7 @@ Crie uma query que retorne o nome de todos os documentos em que o
 campo ultimaModificacao existe.
 */
 db.produtos.update(
-  { "nome": "Bic Mac" },
+  { "nome": "Big Mac" },
   {
     $currentDate: { "ultimaModificacao": { $type: "date" } }
   }

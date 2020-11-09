@@ -10,8 +10,8 @@ sanduíches Big Mac e Quarteirão com Queijo.
 
 Crie uma query que retorne o nome e ingredientes de todos os documentos.
 */
-db.produtos.updateOne({
-  $and: [
+db.produtos.updateMany({
+  $or: [
     { "nome": "Big Mac" },
     { "nome": "Quarteirão com Queijo" }
   ]
