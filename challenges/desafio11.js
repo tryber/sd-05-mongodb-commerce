@@ -18,13 +18,14 @@ documentos.
 db.produtos.updateMany(
   {},
   {
-    $addToSet: {
+    $push: {
       "tags": {
-        $each: [ "combo", "tasty" ],
-        $sort: { "tags": 1 }
+        $each: ["combo", "tasty"],
+        $sort: 1
       }
     }
   },
+  { upsert: true }
 );
 
 db.produtos.find(

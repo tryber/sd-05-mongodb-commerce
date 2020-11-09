@@ -16,9 +16,9 @@ db.produtos.updateMany(
   {},
   {
     $push: {
-      "valorNutricional": {
+      "valoresNutricionais:": {
         $each: [],
-        $sort: { percentual: -1 }
+        $sort: { "percentual": -1 }
       }
     }
   }
