@@ -10,7 +10,7 @@ no sanduíche Big Mac. Para a data corrente faça uso do tipo Date.
 Crie uma query que retorne o nome de todos os documentos em que o
 campo ultimaModificacao existe.
 */
-db.produtos.updateOne(
+db.produtos.update(
   { "nome": "Bic Mac" },
   {
     $currentDate: { "ultimaModificacao": { $type: "date" } }
